@@ -5,6 +5,7 @@ import { Action } from 'redux';
 @Injectable()
 export class DashboardActions {
   static readonly DASHBOARD_INITIALIZED = 'DASHBOARD_INITIALIZED';
+  static readonly DASHBOARD_LOADED = 'DASHBOARD_LOADED';
   static readonly DASHBOARD_DESTROYED = 'DASHBOARD_DESTROYED';
   static readonly SETTINGS_MODIFIED = 'app/dashboard/settings-modified';
   static readonly DATA_RECEIVED = 'app/dashboard/DATA_RECEIVED';
@@ -12,7 +13,12 @@ export class DashboardActions {
   @dispatch()
   public dashboardInitialized = (): Action => ({
     type: DashboardActions.DASHBOARD_INITIALIZED
-  });
+  })
+
+  @dispatch()
+  public dashboardLoaded = (): Action => ({
+    type: DashboardActions.DASHBOARD_LOADED
+  })
 
   public dashboardDestroyed = (): Action => ({
     type: DashboardActions.DASHBOARD_DESTROYED
@@ -25,6 +31,6 @@ export class DashboardActions {
   public dataReceived = (payload: any): any => ({
     type: DashboardActions.DATA_RECEIVED,
     payload: payload
-  });
+  })
 
 }

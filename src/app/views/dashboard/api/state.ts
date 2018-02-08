@@ -20,6 +20,20 @@ export function dashboardStateReducers() {
           initialized: true
         };
     }
+    switch (action.type) {
+      case DashboardActions.DASHBOARD_INITIALIZED:
+        return {
+          ...state,
+          initialized: false
+        };
+    }
+    switch (action.type) {
+      case DashboardActions.DASHBOARD_LOADED:
+        return {
+          ...state,
+          initialized: true
+        };
+    }
 
     switch (action.type) {
       case DashboardActions.DASHBOARD_DESTROYED:

@@ -12,7 +12,7 @@
         </li>
 
         <li tabindex="0" class="menu-orange" [ngClass]="{'active': activeState === 'DASHBOARD'}">
-            <app-link [target]="'DASHBOARD'"><i class="icon-play_circle_outline x2"></i><span>Dashboard</span></app-link>
+            <app-link [target]="'DASHBOARD'"><i class="icon-dashboard x2"></i><span>Dashboard</span></app-link>
         </li>
         <li tabindex="0" class="menu-yellow"  [ngClass]="{'active': activeState === 'SETTINGS'}">
             <app-link [target]="'SETTINGS'"><i class="icon-wifi_tethering x2"></i><span>Settings</span></app-link>
@@ -40,11 +40,11 @@
         <li tabindex="0" class="menu-pink" [ngClass]="{'active': activeState === 'dashboard9'}" (click)="setActiveState('dashboard9')" >
             <i class="icon-info_outline x2"></i><span>Menu Item 9</span>
         </li>
-        <li tabindex="0" class="menu-white menu-divider-top" [ngClass]="{'active': activeState === 'dashboard10'}" (click)="setActiveState('dashboard10')" >
+        <li tabindex="0" class="menu-white menu-divider-top sticky-footer" [ngClass]="{'active': activeState === 'dashboard10'}" (click)="setActiveState('dashboard10')" >
             <i class="icon-info_outline x2"></i><span>Menu Item 10</span>
         </li>
-        <li tabindex="0" class="menu-white" [ngClass]="{'active': activeState === 'dashboard11'}" (click)="setActiveState('dashboard11')" >
-            <i class="icon-info_outline x2"></i><span>Menu Item 10</span>
+        <li tabindex="0" class="menu-white sticky-footer" [ngClass]="{'active': activeState === 'dashboard11'}" (click)="setActiveState('dashboard11')" >
+            <i class="icon-info_outline x2"></i><span>Menu Item 11</span>
         </li>
     </ul>
 </nav>
