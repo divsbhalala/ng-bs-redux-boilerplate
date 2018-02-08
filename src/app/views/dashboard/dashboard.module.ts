@@ -6,6 +6,7 @@ import { DashbaordComponent } from './dashboard.component';
 import { DashboardSettingsComponent } from './components/dashboard-settings.component';
 import { DashboardActions } from './api/actions';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export const id = 'dashboard';
 
@@ -13,7 +14,8 @@ export const id = 'dashboard';
   imports: [
     CommonModule,
     StoreModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   declarations: [
     DashbaordComponent,

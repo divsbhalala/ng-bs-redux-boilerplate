@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { select } from '@angular-redux/store';
 import { DashboardActions } from '../api/actions';
-import { id } from '../dashboard.module';
 
 @Component({
   selector: 'app-dashboard-settings',
@@ -11,7 +10,7 @@ import { id } from '../dashboard.module';
 })
 export class DashboardSettingsComponent {
 
-  @select([id]) public data; // select data from store
+  @select(['dashboard']) public data; // select data from store
 
   constructor(private dispatcher: DashboardActions) {}
 

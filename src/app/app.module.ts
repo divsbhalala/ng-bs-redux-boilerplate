@@ -22,7 +22,9 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './shared/authorization/token.interceptor';
 import { AuthService } from './shared/authorization/authentication.service';
 import { ToDoObservers } from './features/todos/api/observer';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { AsideNavComponent } from './views/dashboard/components/aside-nav/aside-nav.component';
 
 const i18nextOptions = {
   // whitelist: ['en', 'ru'],
@@ -94,6 +96,7 @@ export const I18N_PROVIDERS = [
   declarations: [
     // app
     AppComponent,
+    AsideNavComponent,
   ],
   imports: [ // import Angular's modules
     // core
@@ -101,6 +104,7 @@ export const I18N_PROVIDERS = [
     FormsModule,
     // lib
     I18NextModule.forRoot(),
+    NgbModule.forRoot(),
     // app
     ViewsModule,
     NavigationModule
