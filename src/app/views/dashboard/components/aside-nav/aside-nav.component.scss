@@ -2,7 +2,7 @@ $color-1st: "#ffea92";
 $color-2nd: "#5bc995";
 
 $menu-width-desktop: 240px;
-$menu-width-tablet: 90px;
+$menu-width-tablet: 60px;
 $menu-width-smartphone: 230px;
 
 .menu {
@@ -116,6 +116,9 @@ main {
         background-position: center center;
         background-size: 30px auto;
         position: relative;
+        padding: 0.5em;
+        height: 50px;
+        text-align: center;
         span {
           //display: none;
           opacity: 0;
@@ -128,6 +131,7 @@ main {
           left: $menu-width-tablet - 10px;
           transform: translate3d(-15px,-50%, 0);
           transition: all 0.15s ease-in-out;
+          white-space: nowrap;
 
           &:before {
             content: "";
@@ -143,7 +147,8 @@ main {
           }
         }
         i{
-          vertical-align: middle;
+          vertical-align: top;
+          margin-right: 0;
           &:before {
             vertical-align: middle;
           }

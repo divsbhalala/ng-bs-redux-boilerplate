@@ -130,6 +130,13 @@
 .menu-user{
   color: #000000;
   background-color: rgba(0, 0, 0, 0.1);
+  img{
+    width: 30px;
+    border-radius: 50px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 5px;
+  }
   &.active, &.focus{
     color: #000000;
     background-color: rgba(0, 0, 0, 0.2);
