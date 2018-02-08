@@ -1,11 +1,5 @@
-<nav>
-  <app-link [target]="'DASHBOARD'">Dashboard</app-link>
-  <app-link [target]="'SETTINGS'">Settings</app-link>
-  <app-link [target]="'ABOUT'">About</app-link>
-  <app-link [target]="'TODOS'">ToDo's</app-link>
-</nav>
-
-<section [ngSwitch]="(location | async).type">
+<app-aside-nav></app-aside-nav>
+<main [ngSwitch]="(location | async).type">
   <app-dashboard *ngSwitchCase="'app/navigation/DASHBOARD'"></app-dashboard>
   <app-local-settings *ngSwitchCase="'app/navigation/SETTINGS'"></app-local-settings>
   <app-about *ngSwitchCase="'app/navigation/ABOUT'"></app-about>
@@ -13,4 +7,4 @@
   <app-todos-view *ngSwitchCase="'app/navigation/TODOS'"></app-todos-view>
   <app-todos-view *ngSwitchCase="'app/navigation/TODO_DETAIL'"></app-todos-view>
 
-</section>
+</main>

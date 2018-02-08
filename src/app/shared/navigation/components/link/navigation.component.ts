@@ -14,8 +14,6 @@ export class LinkComponent {
 
   @HostListener('click')
   go() {
-    console.log('this.target');
-    console.log(this.target);
     const actionName = 'app/navigation/' + this.target;
     this.navigate({type: actionName});
   }
