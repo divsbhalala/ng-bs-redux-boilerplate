@@ -24,8 +24,10 @@ export class DashboardActions {
     type: DashboardActions.DASHBOARD_DESTROYED
   })
 
-  public settingsModified = (): Action => ({
-    type: DashboardActions.SETTINGS_MODIFIED
+  @dispatch()
+  public settingsModified = (payload: any): any => ({
+    type: DashboardActions.SETTINGS_MODIFIED,
+    payload : payload
   })
 
   public dataReceived = (payload: any): any => ({
